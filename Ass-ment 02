@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+ int limit;
+ scanf("%d",&limit);
+ int a1=0;
+ int a2=1; 
+ int a3=a1+a2;
+ printf("%d\t%d",a1,a2);
+ for(a3;a3<limit;)
+{
+  a3=a2+a1;
+if(a3<limit)
+ printf("\t%d",a3);
+ a1=a2;
+ a2=a3;
+}
+ return 0;
+}
