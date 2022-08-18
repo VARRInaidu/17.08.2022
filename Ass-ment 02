@@ -1,19 +1,23 @@
+
 #include<stdio.h>
 int main()
 {
  int limit;
  scanf("%d",&limit);
- int a1=0;
- int a2=1; 
- int a3=a1+a2;
- printf("%d\t%d",a1,a2);
- for(a3;a3<limit;)
+int a[100];
+int k=0,h=1;
+  a[k]=0;
+ a[h]=1; 
+int i=2;
+ a[i]=a[k]+a[h];
+ printf("%d\t%d",a[0],a[1]);
+ for(a[i];a[i]<limit;)
 {
-  a3=a2+a1;
-if(a3<limit)
- printf("\t%d",a3);
- a1=a2;
- a2=a3;
+  a[i]=a[k]+a[h];
+if(a[i]<limit)
+ printf("\t%d",a[i]);
+ a[k]=a[h];
+ a[h]=a[i];
 }
  return 0;
 }
